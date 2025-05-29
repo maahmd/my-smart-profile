@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Interaction</title>
+    <link href="css\bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css">
+    <script src="Js\jquery-3.6.0.min.js"></script>
+    <style>
+        .emoji-small { font-size: 1em; }
+    </style>
+</head>
+<body class="smart-body"> 
+ 
+  <header>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container">
+                <a class="navbar-brand">My Smart Profile</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="fun.html">Fun </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="smart.html"> Smart Interaction </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="smart">
+   
+      <div class="theme-toggle d-flex justify-content-center">
+        <label class="switch">
+          <input type="checkbox" id="themeSwitcher">
+          <span class="slider"></span>
+        </label>
+        <span>Toggle Theme</span>
+      </div>
+
+    <div class="container mt-4">
+        <!-- Text Input with Live Greeting -->
+        <div class="mb-3  text-center">
+            <label for="username" class="form-label fs-4">Tell Me Your Name <span class="emoji-small">😊</span>:</label>
+            <input type="text" id="username" class="form-control" placeholder="Type your name here">
+            <p id="greeting" class="mt-2">Welcome! <span class="emoji-small">🌟</span></p>
+        </div>
+
+    <script>
+        $(document).ready(function () {
+  //  "smart.html"
+  if (window.location.pathname.includes("smart.html")) {
+    $("#themeSwitcher").change(function () {
+      $("body").toggleClass("dark-mode");
+    });
+  }
+});
+        $(document).ready(function() {
+            // Live Greeting with Emoji Change
+            $("#username").keyup(function() {
+                let name = $(this).val();
+                if (name) {
+                    $("#greeting").html("Hello, " + name + "! I See You <span class='emoji-small'>👀</span>");
+                } else {
+                    $("#greeting").html("Welcome! <span class='emoji-small'>🌟</span>");
+                }
+            });
+
+            // Hover Effect on Greeting
+            $("#greeting").hover(
+                function() { $(this).css("color", "#ff4500").css("font-weight", "bold"); },
+                function() { $(this).css("color", "").css("font-weight", ""); }
+            );
+
+           // Animate Greeting on Click
+$("#greeting").click(function() {
+    $(this).fadeOut(300).fadeIn(300); //
+});
+        });
+    </script>
+</main>
+    <script src="Js\bootstrap.bundle.min.js"></script>
+    <script src="Js\scripts.js"></script>
+</body>
+</html>

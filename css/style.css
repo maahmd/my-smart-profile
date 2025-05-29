@@ -1,0 +1,1011 @@
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+  --about-main-color: #92ada4;
+  --smart-main-color: #92ada4;
+  --portfolio-main-color: #92ada4;
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #444444;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #222222;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #34b7a7;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #444444;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #34b7a7;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #34b7a7;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+.light-background {
+  --background-color: #e6e9f3;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+  # General Styling & Shared Classes
+  --------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+     background-color: #f2d6a1;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+
+/*--------------------------------------------------------------
+  # Global Header
+  --------------------------------------------------------------*/
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+  line-height: 1;
+}
+
+.header .logo img {
+  max-height: 36px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--heading-color);
+}
+
+.header .header-social-links {
+  padding-right: 15px;
+}
+
+.header .header-social-links a {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  padding-left: 6px;
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.header .header-social-links a:hover {
+  color: var(--accent-color);
+}
+
+.header .header-social-links a i {
+  line-height: 0px;
+}
+
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .header .header-social-links {
+    order: 2;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
+
+
+/*--------------------------------------------------------------
+  # Global Footer
+  --------------------------------------------------------------*/
+.footer {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .social-links {
+  margin-top: 20px;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.footer .sitename {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+  # Global Page Titles & Breadcrumbs
+  --------------------------------------------------------------*/
+.page-title {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 25px 0;
+  position: relative;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.page-title h1 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.page-title .breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.page-title .breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.page-title .breadcrumbs ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+/*--------------------------------------------------------------
+  # Global Sections
+  --------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  padding: 60px 0;
+  scroll-margin-top: 100px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 66px;
+  }
+}
+
+/*--------------------------------------------------------------
+  # Global Section Titles
+  --------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+  # slider Section
+  --------------------------------------------------------------*/
+
+.slide {
+  width: 100%;
+  min-height: calc(100vh - 82px);
+  position: relative;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .slide {
+    min-height: calc(100vh - 68px);
+  }
+}
+
+.slide .carousel-item img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Carousel as background inside */
+.carousel1 {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel1 .carousel-inner,
+.carousel1 .carousel-item,
+.carousel1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slide .content image {
+  position: relative;
+  overflow: hidden;
+  background-color: #34b7a7;
+}
+
+.slide .content img {
+  width: 100%;
+
+}
+
+.slide .container {
+  z-index: 3;
+}
+
+.slide h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.slide p {
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  color: var(--heading-color);
+}
+
+.slide .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 30px;
+}
+
+.slide .btn-get-started:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, white 20%);
+}
+
+@media (max-width: 768px) {
+  .slide h2 {
+    font-size: 32px;
+  }
+
+  .slide p {
+    font-size: 18px;
+  }
+}
+
+/*--------------------------------------------------------------
+  # About Section
+  --------------------------------------------------------------*/
+  .about-body {
+   
+
+    background-color: #f2d6a1;
+    color: #84572f;
+    transition: background-color 1s, color 1s;
+  }
+  
+.about .section {
+  display: flex;
+
+  padding: 40px 5%;
+  align-items: center;
+  background-color: #f2d6a1;
+    color: #84572f;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.about .section .image {
+	width:50%;
+}
+.about .section .text {
+	width:50%;
+}
+.about .text h2 {
+  color: var(--about-main-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.about .text p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.about .image img {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: zoomIn 1s ease;
+}
+
+/* Theme Toggle */
+.about .theme-toggle {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.3em;
+  padding: 20px;
+  background: var(--about-main-color);
+  color: white;
+}
+
+.about .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.about .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.about .slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.about .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #617c73;
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+/* Hidden text */
+.about .hidden {
+  display: none;
+}
+
+/* Show More Button */
+.about button {
+  background-color: var(--about-main-color);
+  color: var(--contrast-color);
+  border: none;
+  font-weight: 500;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about button:hover {
+  background-color: #bcdbd1;
+  color: #444;
+  transform: scale(1.05);
+}
+
+.about button:active {
+  transform: scale(0.98);
+}
+
+/* Hidden Paragraph */
+.about #bio-more {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  transition: opacity 0.5s ease;
+  background-color: #92ada4;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* When hidden */
+.about .hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Dark Theme */
+body.dark-mode .about {
+  background-color: #2e2e2e;
+  /* background-color: #84572f; */
+  color: #92ada4;
+}
+
+.dark-mode .about .section {
+  background: #545757;
+}
+
+.dark-mode .about .section {
+  color: var(--contrast-color);
+}
+
+body.dark-mode .about .theme-toggle {
+  font-weight: 400;
+  font-size: 1.3em;
+  background: #444;
+  color: #92ada4;
+}
+
+.darkmode .about .slider {
+  background-color: var(--about-main-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about .section {
+    flex-direction: column;
+  }
+
+  .about .text,
+  .image {
+    flex: 1 1 100%;
+  }
+
+  .about .text h2 {
+    font-size: 2rem;
+  }
+  .about .section .image {
+	width:100%;
+}
+.about .section .text {
+	width:100%;
+}
+}
+
+.navbar {
+  background-color: var(--about-main-color);
+}
+
+
+/*--------------------------------------------------------------
+  # fun Section
+  --------------------------------------------------------------*/
+.fun-sec {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2d6a1;
+  color: #84572f;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Main container with flex to split text and image */
+.fun-sec.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1100px;
+  width: 100%;
+  background: #92ada4;
+  margin-top: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+}
+
+/* Text block and image block */
+.text-block,
+.image-block {
+  flex: 1 1 45%;
+  background: #fff9e5;
+  border-radius: 15px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 15px rgba(132, 87, 47, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Content box that slides up/down */
+.fun-sec .content-box {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f1a805;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(241, 168, 5, 0.5);
+  display: none;
+  /* Hidden initially */
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Image styling with smooth transition */
+.fun-sec img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(132, 87, 47, 0.3);
+  transition: opacity 1s ease, transform 0.5s ease;
+  cursor: pointer;
+}
+
+/* Buttons with colors and hover effects */
+.fun-sec button {
+  padding: 12px 20px;
+  margin-top: 15px;
+  background-color: #84572f;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(132, 87, 47, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start;
+}
+
+.fun-sec button:hover {
+  background-color: #f1a805;
+  color: #84572f;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .fun-sec.container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .fun-sec.text-block,
+  .image-block {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .fun-sec img {
+    max-width: 70%;
+  }
+}
+
+#portfolio {
+    background-color: #f2d6a1 !important;
+    padding: 60px 0;
+}
+.body-portfolio {
+  background-color: #f2d6a1;
+}
+.portfolio-item {
+  border: 1px #f2d6a1 solid;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 9px 12px 21px -7px rgba(0, 0, 0, 0.44);
+  background-color: var(--background-color); 
+}
+
+.portfolio-item .portfolio-caption {
+  padding: 15px;
+  background-color: var(--portfolio-main-color);
+}
+
+.portfolio-button{
+  background-color: #4CAF50; /* لون أخضر */
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.portfolio-button:active {
+  transform: scale(0.98);
+}
+
+
+/* fun Section**/
+/* Reset and base styles */
+.body-fun{
+background-color: #f2d6a1;	
+}
+.fun-sec {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2d6a1;
+  color: #84572f;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Main container with flex to split text and image */
+.fun-sec.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1100px;
+  width: 100%;
+  background: #92ada4;
+  margin-top: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+}
+
+/* Text block and image block */
+.fun-sec .disabled{
+	display:none ;
+}
+.text-block, .image-block {
+  flex: 1 1 45%;
+  background: #fff9e5;
+  border-radius: 15px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 15px rgba(132, 87, 47, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:100%;
+}
+
+/* Content box that slides up/down */
+.fun-sec .content-box {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f1a805;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(241, 168, 5, 0.5);
+  display: none;  /* Hidden initially */
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Image styling with smooth transition */
+.fun-sec img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(132, 87, 47, 0.3);
+  transition: opacity 1s ease, transform 0.5s ease;
+  cursor: pointer;
+}
+
+/* Buttons with colors and hover effects */
+.fun-sec button {
+  padding: 12px 20px;
+  margin-top: 15px;
+  width: 195px;
+  background-color: #84572f;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(132, 87, 47, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start;
+}
+.buttons-flex{
+	flex-direction: row;
+}
+.fun-sec button:hover {
+  background-color: #f1a805;
+  color: #84572f;
+  transform: scale(1.05);
+}
+ # .smart Section
+  --------------------------------------------------------------*/
+.smart-body {
+    background-color: #f2d6a1;
+    color: #84572f;
+    transition: background-color 1s, color 1s;
+    min-height: 100vh;
+        margin: 0;
+    padding: 0;
+
+}
+ .smart {
+    flex: 1;
+    min-height: calc(100vh - 56px); 
+    background-color: inherit;
+    transition: all 0.5s ease;
+}
+.smart .section{
+  display: flex;
+
+  padding: 40px 5%;
+  align-items: center;
+  background-color: #f2d6a1;
+    color: #84572f;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 100vh;
+  
+}
+/* smart Theme Toggle */
+.smart .theme-toggle {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.3em;
+  padding: 20px;
+  background: var(--smart-main-color);
+  color: white;
+}
+
+.smart .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.smart .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.smart .slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.smart .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #617c73;
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+/* Dark Theme */
+body.dark-mode .smart {
+  background-color: #2e2e2e;
+  /* background-color: #84572f; */
+  color: #92ada4;
+}
+section.dark-mode .smart {
+  background: #545757;
+}
+.dark-mode .smart {
+  background: #545757;
+}
+
+.dark-mode .smart {
+  color: var(--contrast-color);
+}
+
+body.dark-mode .smart .theme-toggle {
+  font-weight: 400;
+  font-size: 1.3em;
+  background: #444;
+  color: #92ada4;
+}
+
+.darkmode .smart .slider {
+  background-color: var(--smart-main-color);
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .fun-sec.container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .fun-sec.text-block, .image-block {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+.fun-sec .disabled{
+	display: flex;
+}
+  .fun-sec img {
+    max-width: 70%;
+  }
+}

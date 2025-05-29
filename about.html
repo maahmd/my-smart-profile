@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <link href="css\bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css\style.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+  <header>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container">
+                <a class="navbar-brand">My Smart Profile</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="fun.html">Fun </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="smart.html"> Smart Interaction </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="about">
+      <div class="theme-toggle d-flex justify-content-center">
+        <label class="switch">
+          <input type="checkbox" id="themeSwitcher">
+          <span class="slider"></span>
+        </label>
+        <span>Toggle Theme</span>
+      </div>
+    
+      <section class="section" id="biography">
+        <div class="text">
+          <h2>Biography</h2>
+          <p>
+            I'm a passionate graphic designer with a flair for modern visuals and creative storytelling.
+            My designs blend innovation and aesthetic to create stunning visual identities.
+          </p>
+          <button onclick="toggleMore('bio-more')">Show More</button>
+          <p id="bio-more" class="hidden">
+            I have worked with several startups and agencies to bring ideas to life through design, combining user experience and visual appeal.
+          </p>
+        </div>
+        <div class="image">
+          <img src="IMG\5.jpg" alt="Designer at Work" />
+        </div>
+      </section>
+    
+      <section class="section" id="hobbies">
+        <div class="image">
+          <img src="IMG\6.jpg" alt="Creative Workspace" />
+        </div>
+        <div class="text">
+          <h2>Hobbies</h2>
+          <p>I enjoy digital painting, photography, and exploring new design tools. Creativity extends into my free time through various artistic outlets.</p>
+        </div>
+      </section>
+    
+      <section class="section" id="goals">
+        <div class="text">
+          <h2>Personal Goals</h2>
+          <p>I aim to establish a design studio that supports small businesses and helps them build meaningful brand identities through art and tech.</p>
+        </div>
+        <div class="image">
+          <img src="IMG\7.jfif" alt="Design Goals" />
+        </div>
+      </section>
+    </div>
+
+
+      <script src="Js\bootstrap.bundle.min.js"></script>
+    <script src="Js\scripts.js"></script>
+</body>
+</html>
